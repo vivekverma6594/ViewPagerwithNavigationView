@@ -10,27 +10,30 @@ import com.wolf.auth.viewpagerwithnavigationview.fragments.TabTwoFragment
 
 /**
  * Created by ${VivekVerma} on 13/02/18.
+ * ViewPager adapter for getting the Fragments to be loaded inside the ViewPager
  */
 
 class SectionsPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
+    //returns the Fragments to be loaded inside the ViewPager
     override fun getItem(position: Int): Fragment {
-
-        when (position) {
+        return when (position) {
             0 -> {
-                return TabOneFragment.newInstance()
+                TabOneFragment.newInstance()
             }
             1 -> {
-                return TabTwoFragment.newInstance()
+                TabTwoFragment.newInstance()
             }
-            else -> return TabOneFragment.newInstance()
+            else -> TabOneFragment.newInstance()
         }
     }
 
+    //return the number of Tabs the ViewPager will have
     override fun getCount(): Int {
         return 2
     }
 
+    //returns the Title for individual page
     override fun getPageTitle(position: Int): CharSequence? {
         when (position) {
             0 -> return "Tab 1"

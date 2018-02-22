@@ -10,6 +10,7 @@ import com.wolf.auth.viewpagerwithnavigationview.R
 
 /**
  * Created by ${VivekVerma} on 21/02/18.
+ * Defines the Fragment shown inside the View Pager
  */
 
 class TabTwoFragment: Fragment(){
